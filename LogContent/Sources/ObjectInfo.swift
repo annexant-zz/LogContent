@@ -38,7 +38,7 @@ extension ObjectInfo {
 				str.append("\(key):<nil>")
 			}
 		}
-		return str.sorted().joinedBy("\n - ")
+		return str.sorted().joined(separator: "\n - ")
 	}
 
 }

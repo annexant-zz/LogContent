@@ -183,7 +183,7 @@ public class LogContent {
 			print(marks[LogLevel.INFO] + "LogContext: sharing to file: \(filename) established")
 
 			let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
-			let path = [dir, filename].joinedBy("/")
+			let path = [dir, filename].joined(separator: "/")
 
 			do {
 				try startUpMessage.write(toFile: path, atomically: true, encoding: Config.fileEncoding)
