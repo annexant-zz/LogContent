@@ -2,8 +2,8 @@
 
 Carthage
 Pods
-PodFile.lock
-Gemfile.lock
+#PodFile.lock
+#Gemfile.lock
 
 xcuserdata
 xcshareddata
