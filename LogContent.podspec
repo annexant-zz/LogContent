@@ -19,6 +19,8 @@ Pod::Spec.new do |spec|
   spec.version      = "1.0.0"
   spec.summary      = "Powerful logging/tracing instrument."
 
+  spec.swift_version	= "4.2"
+
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
@@ -64,7 +66,6 @@ spec.homepage     = "https://github.com/annexant-zz/LogContent"
   #
 
    spec.platform     = :ios, 10
-  # spec.platform     = :ios, "125.0"
 
   #  When using multiple platforms
   # spec.ios.deployment_target = "5.0"
@@ -79,7 +80,9 @@ spec.homepage     = "https://github.com/annexant-zz/LogContent"
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "git@github.com:annexant-zz/LogContent.git", :tag => "#{spec.version}" }
+#spec.source       = { :git => "git@github.com:annexant-zz/LogContent.git", :tag => "#{spec.version}" }
+spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :tag => "#{spec.version}" }
+
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,8 +93,9 @@ spec.homepage     = "https://github.com/annexant-zz/LogContent"
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "LogContent/Sources", "Sources/**/*.{h,m,swift}", "LogContent/Helpers"
-  spec.exclude_files = "Classes/Exclude"
+  #spec.source_files  = "LogContent/Sources", "LogContent/Sources/**/*.{h,m,swift}", "LogContent/Helpers"
+  spec.source_files  = "LogContent/**/**/*.{h,m,swift}"
+  #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "*.h", "Sources/**/*.h"
 
