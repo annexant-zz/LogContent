@@ -28,7 +28,7 @@ Pod::Spec.new do |spec|
 A powerful configurable log helper, which easy collects and then prints info about function, file, string no, thread, timestamp e.t.c with minimum code typing needed.
                    DESC
 
-#spec.homepage     = "http://EXAMPLE/LogContent"
+spec.homepage     = "https://github.com/annexant-zz/LogContent"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -39,8 +39,7 @@ A powerful configurable log helper, which easy collects and then prints info abo
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  spec.license      = "MIT (example)"
-  # spec.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  spec.license      = { :type => "MIT", :file => "LICENSE" }
 
 
   # ――― Author Metadata  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -64,7 +63,7 @@ A powerful configurable log helper, which easy collects and then prints info abo
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-   spec.platform     = :ios
+   spec.platform     = :ios, 10
   # spec.platform     = :ios, "125.0"
 
   #  When using multiple platforms
@@ -80,7 +79,7 @@ A powerful configurable log helper, which easy collects and then prints info abo
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "http://EXAMPLE/LogContent.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "git@github.com:annexant-zz/LogContent.git", :tag => "#{spec.version}" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -91,7 +90,7 @@ A powerful configurable log helper, which easy collects and then prints info abo
   #  Not including the public_header_files will make all headers public.
   #
 
-  spec.source_files  = "Sources", "Sources/**/*.{h,m}", "Helpers"
+  spec.source_files  = "LogContent/Sources", "Sources/**/*.{h,m,swift}", "LogContent/Helpers"
   spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "*.h", "Sources/**/*.h"
