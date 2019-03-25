@@ -94,7 +94,10 @@ spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :
   #
 
   #spec.source_files  = "LogContent/Sources", "LogContent/Sources/**/*.{h,m,swift}", "LogContent/Helpers"
-  spec.source_files  = "LogContent/Sources/**/*.{h,m,swift}", "LogContent/Helpers/**/*.{h,m,swift}"
+#spec.source_files  = "LogContent/Sources/**/*.{h,m,swift}", "LogContent/Helpers/**/*.{h,m,swift}"
+spec.source_files = { :path => '.' }
+
+
   #spec.exclude_files = "Classes/Exclude"
 
   # spec.public_header_files = "*.h", "Sources/**/*.h"
