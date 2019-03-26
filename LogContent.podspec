@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LogContent"
-  spec.version      = "1.0.1"
+  spec.version      = "1.0.2"
   spec.summary      = "Powerful logging/tracing instrument."
 
   # This description is used to generate tags and improve search results.
@@ -92,7 +92,7 @@ spec.homepage     = "https://github.com/annexant-zz/LogContent"
   #
   #  spec.source_files = "LogContent/Sources", "Sources/**/*.{swift}"
   #  spec.exclude_files = "Sources/Exclude"
-  spec.source_files  = "Sources", "Sources/Helpers", "**/*.{h,m}" 
+  spec.source_files  = "Sources", "Sources/Helpers", "**/*.{h,m}"
 
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
