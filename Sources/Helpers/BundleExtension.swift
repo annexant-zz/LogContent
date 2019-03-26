@@ -23,7 +23,7 @@ public extension Bundle {
 
 	- returns: dictionary of values
 	*/
-	public static func contentsOfFile(plistName: String, bundle: Bundle = Bundle.main) -> [String : AnyObject] {
+	static func contentsOfFile(plistName: String, bundle: Bundle = Bundle.main) -> [String : AnyObject] {
 		let fileParts = plistName.components(separatedBy: ".")
 
 		guard
@@ -44,7 +44,7 @@ public extension Bundle {
 
 	- returns: dictionary of values
 	*/
-	public static func contentsOfFile(bundleURL: URL,
+	static func contentsOfFile(bundleURL: URL,
 									  plistName: String = "Root.plist") -> [String : AnyObject] {
 		// Extract plist file from bundle
 		let url = bundleURL.appendingPathComponent(plistName)
@@ -69,7 +69,7 @@ public extension Bundle {
 
 	- returns: dictionary of values
 	*/
-	public static func contentsOfFile(bundleName: String,
+	static func contentsOfFile(bundleName: String,
 									  plistName: String = "Root.plist") -> [String : AnyObject] {
 		guard let bundleURL = Bundle.main.url(forResource: bundleName, withExtension: "bundle")
 			else { return [:] }
@@ -86,7 +86,7 @@ public extension Bundle {
 
 	- returns: dictionary of values
 	*/
-	public static func contentsOfFile(bundle: Bundle,
+	static func contentsOfFile(bundle: Bundle,
 									  bundleName: String = "Settings",
 									  plistName: String = "Root.plist") -> [String : AnyObject] {
 

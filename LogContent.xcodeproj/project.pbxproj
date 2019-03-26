@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		553601272244BF2A005CDE97 /* LogContent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5536011D2244BF2A005CDE97 /* LogContent.framework */; };
 		5536012E2244BF2A005CDE97 /* LogContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 553601202244BF2A005CDE97 /* LogContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5536013C2244BF7C005CDE97 /* LogContentMirror.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553601382244BF7C005CDE97 /* LogContentMirror.swift */; };
 		5536013D2244BF7C005CDE97 /* ObjectInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553601392244BF7C005CDE97 /* ObjectInfo.swift */; };
@@ -16,21 +15,10 @@
 		553601452244BF8D005CDE97 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 553601422244BF8D005CDE97 /* StringExtension.swift */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		553601282244BF2A005CDE97 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 553601142244BF2A005CDE97 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5536011C2244BF2A005CDE97;
-			remoteInfo = LogContent;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
 		5536011D2244BF2A005CDE97 /* LogContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		553601202244BF2A005CDE97 /* LogContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogContent.h; sourceTree = "<group>"; };
 		553601212244BF2A005CDE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		553601262244BF2A005CDE97 /* LogContentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LogContentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		553601382244BF7C005CDE97 /* LogContentMirror.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogContentMirror.swift; sourceTree = "<group>"; };
 		553601392244BF7C005CDE97 /* ObjectInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObjectInfo.swift; sourceTree = "<group>"; };
 		5536013A2244BF7C005CDE97 /* LogContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogContent.swift; sourceTree = "<group>"; };
@@ -49,34 +37,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		553601232244BF2A005CDE97 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				553601272244BF2A005CDE97 /* LogContent.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		55180F0E2248E586005CF55E /* 1.0.0 */ = {
-			isa = PBXGroup;
-			children = (
-				553601472244C08F005CDE97 /* LogContent.podspec */,
-				556144642248B5DE006C2A54 /* LICENSE */,
-				5536013F2244BF8D005CDE97 /* Helpers */,
-				553601462244BF9A005CDE97 /* Sources */,
-			);
-			path = 1.0.0;
-			sourceTree = "<group>";
-		};
 		553601132244BF2A005CDE97 = {
 			isa = PBXGroup;
 			children = (
-				55180F0E2248E586005CF55E /* 1.0.0 */,
 				556144632248B5DD006C2A54 /* README.md */,
-				5536011F2244BF2A005CDE97 /* LogContent */,
+				556144642248B5DE006C2A54 /* LICENSE */,
+				553601212244BF2A005CDE97 /* Info.plist */,
+				553601472244C08F005CDE97 /* LogContent.podspec */,
+				553601462244BF9A005CDE97 /* Sources */,
 				5536011E2244BF2A005CDE97 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -85,18 +56,8 @@
 			isa = PBXGroup;
 			children = (
 				5536011D2244BF2A005CDE97 /* LogContent.framework */,
-				553601262244BF2A005CDE97 /* LogContentTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		5536011F2244BF2A005CDE97 /* LogContent */ = {
-			isa = PBXGroup;
-			children = (
-				553601212244BF2A005CDE97 /* Info.plist */,
-				553601202244BF2A005CDE97 /* LogContent.h */,
-			);
-			path = LogContent;
 			sourceTree = "<group>";
 		};
 		5536013F2244BF8D005CDE97 /* Helpers */ = {
@@ -111,6 +72,8 @@
 		553601462244BF9A005CDE97 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				553601202244BF2A005CDE97 /* LogContent.h */,
+				5536013F2244BF8D005CDE97 /* Helpers */,
 				5536013A2244BF7C005CDE97 /* LogContent.swift */,
 				553601382244BF7C005CDE97 /* LogContentMirror.swift */,
 				553601392244BF7C005CDE97 /* ObjectInfo.swift */,
@@ -150,24 +113,6 @@
 			productReference = 5536011D2244BF2A005CDE97 /* LogContent.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		553601252244BF2A005CDE97 /* LogContentTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 553601342244BF2A005CDE97 /* Build configuration list for PBXNativeTarget "LogContentTests" */;
-			buildPhases = (
-				553601222244BF2A005CDE97 /* Sources */,
-				553601232244BF2A005CDE97 /* Frameworks */,
-				553601242244BF2A005CDE97 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				553601292244BF2A005CDE97 /* PBXTargetDependency */,
-			);
-			name = LogContentTests;
-			productName = LogContentTests;
-			productReference = 553601262244BF2A005CDE97 /* LogContentTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -180,10 +125,7 @@
 				TargetAttributes = {
 					5536011C2244BF2A005CDE97 = {
 						CreatedOnToolsVersion = 10.1;
-						LastSwiftMigration = 1010;
-					};
-					553601252244BF2A005CDE97 = {
-						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -193,6 +135,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 553601132244BF2A005CDE97;
 			productRefGroup = 5536011E2244BF2A005CDE97 /* Products */;
@@ -200,20 +143,12 @@
 			projectRoot = "";
 			targets = (
 				5536011C2244BF2A005CDE97 /* LogContent */,
-				553601252244BF2A005CDE97 /* LogContentTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		5536011B2244BF2A005CDE97 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		553601242244BF2A005CDE97 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -235,22 +170,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		553601222244BF2A005CDE97 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		553601292244BF2A005CDE97 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 5536011C2244BF2A005CDE97 /* LogContent */;
-			targetProxy = 553601282244BF2A005CDE97 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5536012F2244BF2A005CDE97 /* Debug */ = {
@@ -388,7 +308,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LogContent/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -400,7 +320,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG ENABLE_GLOBAL_LOG_FUNCTIONS";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -416,7 +336,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = LogContent/Info.plist;
+				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -427,45 +347,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = ENABLE_GLOBAL_LOG_FUNCTIONS;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		553601352244BF2A005CDE97 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F5K9BJRP4;
-				INFOPLIST_FILE = LogContentTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.annexant.LogContentTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		553601362244BF2A005CDE97 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7F5K9BJRP4;
-				INFOPLIST_FILE = LogContentTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.annexant.LogContentTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -487,15 +369,6 @@
 			buildConfigurations = (
 				553601322244BF2A005CDE97 /* Debug */,
 				553601332244BF2A005CDE97 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		553601342244BF2A005CDE97 /* Build configuration list for PBXNativeTarget "LogContentTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				553601352244BF2A005CDE97 /* Debug */,
-				553601362244BF2A005CDE97 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

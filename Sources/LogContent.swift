@@ -93,6 +93,8 @@ public class LogContent {
 				return "BG"
 			case .default:
 				return "DEF"
+			default:
+				return "<Unknown>"
 			}
 		}
 	}
@@ -330,19 +332,19 @@ public extension LogContent {
 }
 
 public extension LogContent {
-	public class func logError(_ error:Error, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
+	class func logError(_ error:Error, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
 		LogContent(error, file, line, function).logError()
 	}
 
-	public class func logError(_ message: String? = nil, _ error:Error? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
+	class func logError(_ message: String? = nil, _ error:Error? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
 		LogContent(message, error, file, line, function).logError()
 	}
 
-	public class func logWarning(_ message: String? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
+	class func logWarning(_ message: String? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
 		LogContent(message, file, line, function).logWarning()
 	}
 
-	public class func logInfo(_ message: String? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
+	class func logInfo(_ message: String? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
 		LogContent(message, file, line, function).logInfo()
 	}
 }
