@@ -16,10 +16,8 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "LogContent"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Powerful logging/tracing instrument."
-
-  spec.swift_version	= "5"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -81,7 +79,7 @@ spec.homepage     = "https://github.com/annexant-zz/LogContent"
   #
 
 #spec.source       = { :git => "git@github.com:annexant-zz/LogContent.git", :tag => "#{spec.version}" }
-spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :tag => "#{spec.version}" }
+  spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :tag => "#{spec.version}" }
 
 
 
@@ -92,8 +90,10 @@ spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :
   #  For header files it will include any header in the folder.
   #  Not including the public_header_files will make all headers public.
   #
+  #  spec.source_files = "LogContent/Sources", "Sources/**/*.{swift}"
+  #  spec.exclude_files = "Sources/Exclude"
+  spec.source_files  = "Sources", "Sources/Helpers", "**/*.{h,m}" 
 
-	spec.source_files = "LogContent/Sources/**/*.swift"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -128,7 +128,8 @@ spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
+  spec.swift_version = "5.0"
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"

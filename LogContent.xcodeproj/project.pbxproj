@@ -16,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		550C81DF224A344C00CEEAB8 /* LogContent.podspec0 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LogContent.podspec0; sourceTree = "<group>"; };
 		5536011D2244BF2A005CDE97 /* LogContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LogContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		553601202244BF2A005CDE97 /* LogContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogContent.h; sourceTree = "<group>"; };
 		553601212244BF2A005CDE97 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -43,6 +44,7 @@
 		553601132244BF2A005CDE97 = {
 			isa = PBXGroup;
 			children = (
+				550C81DF224A344C00CEEAB8 /* LogContent.podspec0 */,
 				556144632248B5DD006C2A54 /* README.md */,
 				556144642248B5DE006C2A54 /* LICENSE */,
 				553601212244BF2A005CDE97 /* Info.plist */,
