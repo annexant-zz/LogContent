@@ -93,7 +93,7 @@ spec.source       = { :git => "https://github.com/annexant-zz/LogContent.git", :
   #  Not including the public_header_files will make all headers public.
   #
 
-	spec.source_files = "**/*.swift"
+	spec.source_files = "LogContent/Sources/**/*.swift"
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #

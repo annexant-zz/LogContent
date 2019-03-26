@@ -72,11 +72,11 @@
 		553601462244BF9A005CDE97 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				553601202244BF2A005CDE97 /* LogContent.h */,
 				5536013F2244BF8D005CDE97 /* Helpers */,
 				5536013A2244BF7C005CDE97 /* LogContent.swift */,
 				553601382244BF7C005CDE97 /* LogContentMirror.swift */,
 				553601392244BF7C005CDE97 /* ObjectInfo.swift */,
+				553601202244BF2A005CDE97 /* LogContent.h */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
