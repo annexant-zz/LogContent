@@ -1,0 +1,11 @@
+framework module LogContent {
+  umbrella header "LogContent.h"
+
+  export *
+  module * { export * }
+}
+
+module LogContent.Swift {
+    header "LogContent-Swift.h"
+    requires objc
+}
