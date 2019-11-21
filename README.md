@@ -1,6 +1,6 @@
 # LogContent
 
-
+A Powerfull and convenient logger 
 
 1. Configure at application startup:
 

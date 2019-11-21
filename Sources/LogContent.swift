@@ -158,7 +158,7 @@ public class LogContent {
 		}
 	}
 
-	class func initialize() {
+	public class func initialize() {
 		let startUpMessage = "=== Logging started. ===\n"
 		if Config.storeToFile {
 			let startedAt = Date()
