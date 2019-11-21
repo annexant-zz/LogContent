@@ -33,7 +33,7 @@ func logWarning(_ message: String? = nil, _ file: String = #file,_ line: Int = #
 
 @inline(__always)
 func logInfo(_ message: String? = nil, _ file: String = #file,_ line: Int = #line, _ function: String = #function) {
-	LogContent(message, file, line, function).logInfo()
+	LogContent(message, file, line, function).logInfo()	
 }
 
 
