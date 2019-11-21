@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 //typealias lc = LogContent
 //typealias LC = LogContent
@@ -16,25 +17,26 @@ public class LogContent {
 
 	public class Config {
 
-		enum DetalizationLevel {
+		public enum DetalizationLevel {
 			case none, short, medium, detail
 		}
 
-		enum TimestampPresentation {
+		public enum TimestampPresentation {
 			case none, relative, detail
 		}
 
-		static var logErrors = true
-		static var logWarnings = true
-		static var logInfos = true
+		public static var logErrors = true
+		public static var logWarnings = true
+		public static var logInfos = true
 
-		static var showThreadInfo: DetalizationLevel = .short
-		static var showTimestamp: TimestampPresentation = .relative
-		static var relativeTimestampFormat = "%.4f:"
+		public static var showThreadInfo: DetalizationLevel = .short
+		public static var showTimestamp: TimestampPresentation = .relative
+		public static var relativeTimestampFormat = "%.4f:"
 
-		static var storeToFile = false
-		static var fileEncoding = String.Encoding.utf8
-		static var redirectErrorOutput = true
+		public static var storeToFile = false
+		public static var fileEncoding = String.Encoding.utf8
+		public static var redirectErrorOutput = true
+		public static var redirectStdOutput = true
 	}
 
 	class ThreadInfo {
@@ -119,7 +121,7 @@ public class LogContent {
 
 	static var startedAt: Date =  {
 		let result = Date()
-		initialize()		// Auto Init
+//		initialize()		// Auto Init
 		return result
 	}()
 
@@ -182,7 +184,8 @@ public class LogContent {
 				.replacingOccurrences(of: ", ", with: "-")
 				.replacingOccurrences(of: "/", with: ":")
 
-			print(marks[LogLevel.INFO] + "LogContext: sharing to file: \(filename) established")
+			print(startUpMessage)
+			print(marks[LogLevel.INFO] + "LogContext: sharing to file: \(filename)")
 
 			let dir = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as String
 			let path = [dir, filename].joined(separator: "/")
@@ -196,12 +199,42 @@ public class LogContent {
 				print(marks[LogLevel.ERROR] + "Unable to create log file: \(error)")
 				return
 			}
+
+			NotificationCenter.default.addObserver(
+				self,
+				selector: #selector(onAppTerminate),
+				name: UIApplication.willTerminateNotification,
+				object: nil)
+
 			if Config.redirectErrorOutput {
+				let str = marks[LogLevel.INFO] + "LogContext: ERROR OUTPUT REDIRECTED! "
+				print(str)
+				write(str)
 				_ = freopen(path.cString(using: Config.fileEncoding), "a+", stderr)
-				print(marks[LogLevel.INFO] + "LogContext: ERROR OUTPUT REDIRECTED! ")
+			}
+			if Config.redirectStdOutput {
+				let str = marks[LogLevel.INFO] + "LogContext: STD OUTPUT REDIRECTED! "
+				print(str)
+				write(str)
+				_ = freopen(path.cString(using: Config.fileEncoding), "a+", stdout)
 			}
 		}
-		print(startUpMessage)
+	}
+
+	@objc func onAppTerminate() {
+		NotificationCenter.default.removeObserver(self)
+		LogContent.deinitialize()
+	}
+
+	static func deinitialize() {
+		logInfo("DEINITIALIZED")
+		if let fileHandle = SELF.file {
+			if #available(iOS 13.0, *) {
+				try? fileHandle.close()
+			} else {
+				fileHandle.closeFile()
+			}
+		}
 	}
 
 	class func write(_ message: String) {

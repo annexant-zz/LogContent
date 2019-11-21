@@ -7,7 +7,7 @@
 
 import MediaPlayer
 
-protocol ObjectInfo {
+public protocol ObjectInfo {
 	var objectInfo: String {get}
 	var objectInfoWithType: String {get}
 
@@ -15,7 +15,7 @@ protocol ObjectInfo {
 	func objectInfo(showNil: Bool, options: [String : Any?]?) -> String
 }
 
-extension ObjectInfo {
+public extension ObjectInfo {
 
 	var objectInfo: String {
 		return objectInfo(showNil: false)
@@ -44,14 +44,14 @@ extension ObjectInfo {
 }
 
 extension IndexPath: ObjectInfo {
-	var objectInfo: String {
+	public var objectInfo: String {
 		let path = self.map { return $0 }
 		return "\(path)"
 	}
 }
 
 extension Data: ObjectInfo {
-	var objectInfo: String {
+	public var objectInfo: String {
 		var result = "["
 		for b in self {
 			let separator = result.count > 1 ? "," : ""
